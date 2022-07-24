@@ -1,0 +1,423 @@
+:root {
+  --font_primary: "Poppins", sans-serif;
+  --font_title: "Jolly Lodger", sans-serif;
+
+  --font_color_primary: #000000;
+  --font_color_paragraph: #757575;
+  --font_color_button: #ffffff;
+
+  --font_size_small: clamp(1.5rem, 4vw, 2rem);
+  --font_size_medium: clamp(2rem, 8vw, 4rem);
+  --font_size_large: clamp(2rem, 6.5vw, 3.2rem);
+  --font_size_extra: clamp(4.5rem, 15vw, 7.5rem);
+  --font_size_button: clamp(1.5rem, 4vw, 2rem);
+
+  --color_button: #757575;
+  --color_border: #9e9e9e;
+  --color_section_bg: #d9d9d9;
+  --color_navbar: #ffffff;
+
+  --spacing_small: clamp(2rem, 2vw, 4rem);
+  --spacing_medium: clamp(4rem, 4vw, 8rem);
+
+  /* --center: center; */
+}
+
+html {
+  /* default font size is 16 px */ 
+  font-size: 62.5%; 
+  /* font-size: 100%;  */
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* styles  */
+/* section-1 */
+section .landingImg {
+  position: relative;
+  text-align: center;
+
+  padding-top: 80px;
+  /* border: red solid 2px; */
+}
+
+section .landingImg .imgheader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section .landingImg .header1 {
+  font-size: var(--font_size_extra);
+  font-family: var(--font_primary);
+  font-weight: 700;
+
+  position: relative;
+  top: -20px;
+  /* border: red solid 2px; */
+}
+
+section .landingImg .header3 {
+  font-size: var(--font_size_large);
+  font-family: var(--font_primary);
+  font-weight: 700;
+  white-space: nowrap;
+
+
+  background-image: linear-gradient(
+    to bottom,
+    rgb(208, 208, 208),
+    rgb(196, 196, 196),
+    rgb(37, 37, 37),
+    rgb(0, 0, 0),
+    black
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: 100%;
+  /* border: red solid 2px; */
+}
+
+section .landingImg img {
+  height: 70vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+
+  object-fit: cover;
+  object-position: top;
+}
+
+/* section-2 */
+/* section_header */
+section .section_header .header_service {
+  font-size: var(--font_size_medium);
+  font-family: var(--font_title);
+  text-align: center;
+  margin: 10vh auto;
+
+}
+
+/* section_containers */
+section .section_containers {
+  display: flex;
+  flex-direction: column;
+
+  /* width: 500px; */
+  /* margin: auto; */
+}
+
+section .section_containers .containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+
+  border: var(--color_border) solid 3px;
+
+  width: 100%;
+  max-width: 80vw;
+  margin: 8vh auto; 
+  margin-top: 0px;
+
+  /* background-color: aquamarine; */
+  /* border: red solid 2px; */
+}
+
+section .section_containers .containers .service_name {
+  font-size: var(--font_size_large);
+  font-family: var(--font_title);
+  text-align: center;
+
+  margin: var(--spacing_medium) auto;
+  margin-bottom: 0px;
+}
+
+section .section_containers .containers .description {
+  font-size: var(--font_size_small);
+  font-family: var(--font_primary);
+  text-align: justify;
+  color: var(--font_color_paragraph);
+  width: 80%;
+  margin: var(--spacing_medium) auto;
+
+  /* text limitation */
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; 
+  /* line-clamp: 3; */
+  -webkit-box-orient: vertical; 
+}
+
+section .section_containers .containers .service_button {
+  /* border: red solid 2px; */
+
+  /* responsive part */
+  width: 80%;
+  margin-bottom: var(--spacing_medium);
+  padding: 3% 0px;
+
+  /* style part */
+  font-size: var(--font_size_button);
+  font-family: var(--font_primary);
+  background-color: var(--color_button);
+  text-align: center;
+  text-decoration: none;
+  color: var(--font_color_button);
+  border-radius: 1000px;
+}
+
+/* promo section */
+section .section_promo {
+  background-color: var(--color_section_bg);
+  width: 100vw;
+  padding: var(--spacing_medium);
+}
+
+section .section_promo .section_promo_text {
+  text-align: center;
+  /* padding: 1vw; */
+  font-size: var(--font_size_large);
+  font-family: var(--font_title);
+
+  /* border: red solid 2px; */
+}
+
+/* footer */
+footer {
+  background-color: var(--font_color_primary);
+}
+
+footer img {
+  width: 25%;
+  margin: auto;
+  padding: var(--spacing_medium) 0px;
+}
+
+@media screen and (min-width: 900px) {
+  section .section_containers {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    /* border: red solid 2px; */
+  }
+
+  section .section_containers .containers {
+    width: 100%;
+    max-width: 27.5%;
+  }
+
+  section .section_containers .containers .service_name {
+    /* margin: var(--spacing_medium) auto; */
+    margin: var(--spacing_small) auto;
+    margin-bottom: 0px;
+  }
+
+  section .section_containers .containers .description {
+    margin: var(--spacing_small) auto;
+  }
+
+  section .section_containers .containers .service_button {
+    margin-bottom: var(--spacing_small);
+  }
+
+  footer img {
+    width: 10%;
+    padding: var(--spacing_small) 0px;
+  }
+}
+
+/* nav bar */
+.topnav {
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+  width: 100%;
+  max-width: 1440px;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* border: red solid 2px; */
+
+  /* padding: 15px 10px; */
+}
+
+.topnav a {
+  float: left;
+  display: inline;
+  color: #000000;
+  text-align: center;
+  padding: 25px 16px;
+  text-decoration: none;
+  font-size: var(--font_size_small);
+
+  font-family: var(--font_primary);
+  /* border: red solid 2px; */
+}
+.topnav .promoBtn {
+  margin-left: var(--spacing_medium);
+
+  /* border: red solid 2px; */
+
+  /* responsive part */
+  width: 15%;
+  padding: 0.5rem 0px;
+  margin-right: 10px;
+
+  /* style part */
+  /* font-size: var(--font_size_button); ctrl + / */
+  font-family: var(--font_primary);
+  background-color: var(--color_button);
+  text-align: center;
+  text-decoration: none;
+  color: var(--font_color_button);
+  border-radius: 1000px;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    /* border: green solid 2px; */
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .topnav {
+    display: block;
+
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .topnav.responsive {
+    position: fixed;
+    height: 100vh;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+
+    text-align: center;
+  }
+  .topnav .promoBtn {
+    margin-left: 0;
+  }
+
+  .topnav .promoBtn {
+    margin: 5vh auto;
+    padding: 1.5rem auto;
+    width: 100%;
+    max-width: 300px;
+
+    /* style part */
+    font-size: var(--font_size_button);
+    font-family: var(--font_primary);
+    background-color: var(--color_button);
+    text-align: center;
+    text-decoration: none;
+    color: var(--font_color_button);
+    border-radius: 1000px;
+  }
+}
